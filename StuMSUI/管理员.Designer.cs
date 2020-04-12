@@ -32,11 +32,8 @@
             this.系统设置ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.管理学生ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.管理教师ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.管理课程ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.管理院系ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.课程报表ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.学生报表ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.教师报表ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.课程报表ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.院系报表ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.选课报表ToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
@@ -49,8 +46,6 @@
             this.系统设置ToolStripMenuItem,
             this.管理学生ToolStripMenuItem,
             this.管理教师ToolStripMenuItem,
-            this.管理课程ToolStripMenuItem,
-            this.管理院系ToolStripMenuItem,
             this.课程报表ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -78,23 +73,10 @@
             this.管理教师ToolStripMenuItem.Text = "管理教师";
             this.管理教师ToolStripMenuItem.Click += new System.EventHandler(this.管理教师ToolStripMenuItem_Click);
             // 
-            // 管理课程ToolStripMenuItem
-            // 
-            this.管理课程ToolStripMenuItem.Name = "管理课程ToolStripMenuItem";
-            this.管理课程ToolStripMenuItem.Size = new System.Drawing.Size(68, 21);
-            this.管理课程ToolStripMenuItem.Text = "管理课程";
-            // 
-            // 管理院系ToolStripMenuItem
-            // 
-            this.管理院系ToolStripMenuItem.Name = "管理院系ToolStripMenuItem";
-            this.管理院系ToolStripMenuItem.Size = new System.Drawing.Size(68, 21);
-            this.管理院系ToolStripMenuItem.Text = "管理院系";
-            // 
             // 课程报表ToolStripMenuItem
             // 
             this.课程报表ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.学生报表ToolStripMenuItem,
-            this.教师报表ToolStripMenuItem,
             this.课程报表ToolStripMenuItem1,
             this.院系报表ToolStripMenuItem,
             this.选课报表ToolStripMenuItem2});
@@ -105,33 +87,26 @@
             // 学生报表ToolStripMenuItem
             // 
             this.学生报表ToolStripMenuItem.Name = "学生报表ToolStripMenuItem";
-            this.学生报表ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.学生报表ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.学生报表ToolStripMenuItem.Text = "学生报表";
-            // 
-            // 教师报表ToolStripMenuItem
-            // 
-            this.教师报表ToolStripMenuItem.Name = "教师报表ToolStripMenuItem";
-            this.教师报表ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
-            this.教师报表ToolStripMenuItem.Text = "教师报表";
-            this.教师报表ToolStripMenuItem.Click += new System.EventHandler(this.教师报表ToolStripMenuItem_Click);
             // 
             // 课程报表ToolStripMenuItem1
             // 
             this.课程报表ToolStripMenuItem1.Name = "课程报表ToolStripMenuItem1";
-            this.课程报表ToolStripMenuItem1.Size = new System.Drawing.Size(124, 22);
+            this.课程报表ToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.课程报表ToolStripMenuItem1.Text = "课程报表";
             // 
             // 院系报表ToolStripMenuItem
             // 
             this.院系报表ToolStripMenuItem.Name = "院系报表ToolStripMenuItem";
-            this.院系报表ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.院系报表ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.院系报表ToolStripMenuItem.Text = "院系报表";
             this.院系报表ToolStripMenuItem.Click += new System.EventHandler(this.院系报表ToolStripMenuItem_Click);
             // 
             // 选课报表ToolStripMenuItem2
             // 
             this.选课报表ToolStripMenuItem2.Name = "选课报表ToolStripMenuItem2";
-            this.选课报表ToolStripMenuItem2.Size = new System.Drawing.Size(124, 22);
+            this.选课报表ToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
             this.选课报表ToolStripMenuItem2.Text = "选课报表";
             this.选课报表ToolStripMenuItem2.Click += new System.EventHandler(this.选课报表ToolStripMenuItem2_Click_1);
             // 
@@ -160,11 +135,8 @@
         private System.Windows.Forms.ToolStripMenuItem 系统设置ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 管理学生ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 管理教师ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 管理课程ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 管理院系ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 课程报表ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 学生报表ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 教师报表ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 课程报表ToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem 院系报表ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 选课报表ToolStripMenuItem2;

@@ -20,6 +20,7 @@ namespace StuMSUI
             InitializeComponent();
         }
         private TeacherBll tb = new TeacherBll();
+        private CourseBll cb = new CourseBll();
         public void BindViem()
         {
             this.dataGridView1.DataSource = tb.SelTeacher();
@@ -28,20 +29,47 @@ namespace StuMSUI
         {
             BindViem();
         }
-
-        
-
         private void 删除ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            int cid = Convert.ToInt32(this.dataGridView1.SelectedRows[0].Cells[0].Value);
-            if (tb.DelTeacher(cid))
+            int tid = Convert.ToInt32(this.dataGridView1.SelectedRows[0].Cells[0].Value);
+            
+            if (cb.DelCourseByTid(tid)>0 || cb.DelCourseByTid(tid) ==0)
             {
-                MessageBox.Show("yes");
-                BindViem();
+                if (tb.DelTeacher(tid) ) {
+                    MessageBox.Show("yes");
+                    BindViem();
+                }
             }
             else
             {
                 MessageBox.Show("no");
+            }
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Teacher t = new Teacher()
+            {
+                Tname=this.textBox1.Text,
+                TProfession=this.textBox2.Text,
+                TPassword=this.textBox3.Text
+            };
+            if (tb.InsTeacher(t))
+            {
+                MessageBox.Show("成功！");
+                this.textBox1.Text = this.textBox2.Text = this.textBox3.Text = "";
+                BindViem();
+            }
+            else
+            {
+                MessageBox.Show("失败！");
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (DialogResult.OK == MessageBox.Show("你确定要关闭应用程序吗？", "关闭提示", MessageBoxButtons.OKCancel, MessageBoxIcon.Question))
+            {
+                this.Close();
             }
         }
     }

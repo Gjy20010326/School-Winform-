@@ -21,13 +21,7 @@ namespace StuMSUI
             InitializeComponent();
         }
 
-        private void 教师报表ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            g教师报表 s = new g教师报表();
-            s.MdiParent = this;
-            s.StartPosition = FormStartPosition.CenterScreen;
-            ChangeChildren(s);
-        }
+        
         /// <summary>
         /// 点击院系报表按钮打开院系报表界面
         /// </summary>
@@ -110,7 +104,10 @@ namespace StuMSUI
 
         private void 管理教师ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            g教师报表 s = new g教师报表();
+            s.MdiParent = this;
+            s.StartPosition = FormStartPosition.CenterScreen;
+            ChangeChildren(s);
         }
     }
 }

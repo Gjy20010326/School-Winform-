@@ -29,6 +29,24 @@ namespace StuMSDal
             string sql = "delete from Course where cid=" + cid;
             return ADOTools.ExcuteNoQuery(tran, sql);
         }
+        /// <summary>
+        /// 按tid删除course表里的数据
+        /// </summary>
+        /// <param name="tran"></param>
+        /// <param name="tid"></param>
+        /// <returns></returns>
+        /// 
+        public int DelCourseByTid(int tid)
+        {
+            string sql = "delete from Course where tid=" + tid;
+            return ADOTools.ExcuteNoQuery(sql);
+        }
+        //public int DelCourseByTid(SqlTransaction tran, int tid)
+        //{
+        //    string sql = "delete from Course where tid=" + tid;
+        //    return ADOTools.ExcuteNoQuery(tran, sql);
+        //}
+
         //查询课程
         public List<Course> SelCourse()
         {

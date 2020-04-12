@@ -55,5 +55,9 @@ namespace StuMSBll
         {
             return td.SelTeacher();
         }
+        public bool DelTeacherByTid(int tid)
+        {
+            return td.DelTeacherByTid(tid)>0;
+        }
     }
 }

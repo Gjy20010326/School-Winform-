@@ -57,7 +57,20 @@ namespace StuMSDal
             string sql = "delete from teacher where tid=" + tid;
             return ADOTools.ExcuteNoQuery(tran, sql);
         }
-        //查询老师
+        /// <summary>
+        /// 按ID删除教师
+        /// </summary>
+        /// <param name="tid"></param>
+        /// <returns></returns>
+        public int DelTeacherByTid(int tid)
+        {
+            string sql = "delete from teacher where tid=" + tid;
+            return ADOTools.ExcuteNoQuery(sql);
+        }
+        /// <summary>
+        /// 查询教师
+        /// </summary>
+        /// <returns></returns>
         public List<Teacher> SelTeacher()
         {
             string sql = "select * from teacher";
