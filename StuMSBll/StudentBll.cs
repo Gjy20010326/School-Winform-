@@ -78,5 +78,13 @@ namespace StuMSBll
         {
             return sd.UpdStudent(s)>0;
         }
+        /// <summary>
+        /// 按照学生ID查询成绩
+        /// </summary>
+        /// <returns></returns>
+        public DataTable SearchStuID(int sid)
+        {
+            return sd.SearchStuID(sid);
+        }
     }
 }

@@ -104,5 +104,15 @@ namespace StuMSDal
             }
             return list;
         }
+        /// <summary>
+        /// 按照id进行修改
+        /// </summary>
+        /// <param name="t"></param>
+        /// <returns></returns>
+        public int UpdTeacher(Teacher t)
+        {
+            string sql = "update teacher set tname='"+t.Tname+"',tProfession='"+t.TProfession+"',tpassword='"+t.TPassword+"' where tid="+t.Tid;
+            return ADOTools.ExcuteNoQuery(sql);
+        }
     }
 }

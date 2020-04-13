@@ -1,6 +1,6 @@
 ﻿namespace StuMSUI
 {
-    partial class gl管理学生
+    partial class 管理学生
     {
         /// <summary>
         /// Required designer variable.

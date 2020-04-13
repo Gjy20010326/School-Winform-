@@ -12,11 +12,26 @@ namespace StuMSDal
     public class SC_MappingDal
     {
         //添加成绩
-        public int InsSC_Mapping(SC_Mapping sc)
+        public int UpdSC_Mapping(SC_Mapping sc)
         {
-            string sql = "insert into SC_Mapping values(" + sc.Sid + "," + sc.Cid + "," + sc.Score + ")";
+            string sql = "update SC_Mapping set score="+sc.Score+" where sid="+sc.Sid+" and cid="+sc.Cid+"";
             return ADOTools.ExcuteNoQuery(sql);
         }
+
+        
+        /// <summary>
+        /// 选课
+        /// </summary>
+        /// <param name="sc"></param>
+        /// <returns></returns>
+        //public int InsSC_Mapping(SC_Mapping sc)
+        //{
+        //    string sql = "insert into SC_Mapping(tid,cid,score)values("+sc.Sid+","",null);";
+        //}
+
+
+
+
         //按scid删除
         public int DelSC_Mapping(int scid)
         {
@@ -65,5 +80,6 @@ namespace StuMSDal
                             inner join teacher as t on t.tid=c.tid";
             return ADOTools.ExcuteDataTable(sql);
         }
+        
     }
 }

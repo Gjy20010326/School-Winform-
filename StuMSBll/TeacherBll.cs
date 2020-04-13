@@ -59,5 +59,14 @@ namespace StuMSBll
         {
             return td.DelTeacherByTid(tid)>0;
         }
+        /// <summary>
+        /// 按照id进行修改
+        /// </summary>
+        /// <param name="t"></param>
+        /// <returns></returns>
+        public bool UpdTeacher(Teacher t)
+        {
+            return td.UpdTeacher(t)>0;
+        }
     }
 }

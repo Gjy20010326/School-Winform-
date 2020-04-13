@@ -14,9 +14,9 @@ namespace StuMSBll
     public class SC_MappingBll
     {
         private SC_MappingDal scd = new SC_MappingDal();
-        public bool InsSC_Mapping(SC_Mapping sc)
+        public bool UpdSC_Mapping(SC_Mapping sc)
         {
-            return scd.InsSC_Mapping(sc) > 0;
+            return scd.UpdSC_Mapping(sc)>0;
         }
         public bool DelSC_Mapping(int scid)
         {

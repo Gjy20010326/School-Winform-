@@ -11,9 +11,9 @@ using StuMSModels;
 using StuMSBll;
 namespace StuMSUI
 {
-    public partial class gl管理学生 : Form
+    public partial class 管理学生 : Form
     {
-        public gl管理学生()
+        public 管理学生()
         {
             InitializeComponent();
         }

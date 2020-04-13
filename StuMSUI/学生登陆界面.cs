@@ -40,6 +40,7 @@ namespace StuMSUI
                 MessageBox.Show("登陆成功！");
                 学生 d = new 学生();
                 d.sid = Convert.ToInt32(this.textBox1.Text);
+                d.spwd = this.textBox2.Text;
                 d.Show();
                 this.Visible = false;
             }

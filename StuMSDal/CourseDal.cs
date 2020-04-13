@@ -17,6 +17,7 @@ namespace StuMSDal
             string sql = "insert into Course values(" + c.Tid + ",'" + c.Cname + "'," + c.Climit + ")";
             return ADOTools.ExcuteNoQuery(sql);
         }
+
         //单独删除课程
         //public int DelCourseByID(int cid)
         //{

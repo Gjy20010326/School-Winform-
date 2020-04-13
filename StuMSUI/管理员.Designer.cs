@@ -33,10 +33,9 @@
             this.管理学生ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.管理教师ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.课程报表ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.学生报表ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.课程报表ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.院系报表ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.选课报表ToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.关闭ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,10 +45,11 @@
             this.系统设置ToolStripMenuItem,
             this.管理学生ToolStripMenuItem,
             this.管理教师ToolStripMenuItem,
-            this.课程报表ToolStripMenuItem});
+            this.课程报表ToolStripMenuItem,
+            this.关闭ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(634, 25);
+            this.menuStrip1.Size = new System.Drawing.Size(645, 25);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -76,25 +76,11 @@
             // 课程报表ToolStripMenuItem
             // 
             this.课程报表ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.学生报表ToolStripMenuItem,
-            this.课程报表ToolStripMenuItem1,
             this.院系报表ToolStripMenuItem,
             this.选课报表ToolStripMenuItem2});
             this.课程报表ToolStripMenuItem.Name = "课程报表ToolStripMenuItem";
             this.课程报表ToolStripMenuItem.Size = new System.Drawing.Size(68, 21);
             this.课程报表ToolStripMenuItem.Text = "数据报表";
-            // 
-            // 学生报表ToolStripMenuItem
-            // 
-            this.学生报表ToolStripMenuItem.Name = "学生报表ToolStripMenuItem";
-            this.学生报表ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.学生报表ToolStripMenuItem.Text = "学生报表";
-            // 
-            // 课程报表ToolStripMenuItem1
-            // 
-            this.课程报表ToolStripMenuItem1.Name = "课程报表ToolStripMenuItem1";
-            this.课程报表ToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.课程报表ToolStripMenuItem1.Text = "课程报表";
             // 
             // 院系报表ToolStripMenuItem
             // 
@@ -110,12 +96,20 @@
             this.选课报表ToolStripMenuItem2.Text = "选课报表";
             this.选课报表ToolStripMenuItem2.Click += new System.EventHandler(this.选课报表ToolStripMenuItem2_Click_1);
             // 
+            // 关闭ToolStripMenuItem
+            // 
+            this.关闭ToolStripMenuItem.Name = "关闭ToolStripMenuItem";
+            this.关闭ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
+            this.关闭ToolStripMenuItem.Text = "关闭";
+            this.关闭ToolStripMenuItem.Click += new System.EventHandler(this.关闭ToolStripMenuItem_Click);
+            // 
             // 管理员
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(634, 483);
+            this.ClientSize = new System.Drawing.Size(645, 492);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "管理员";
@@ -136,9 +130,8 @@
         private System.Windows.Forms.ToolStripMenuItem 管理学生ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 管理教师ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 课程报表ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 学生报表ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 课程报表ToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem 院系报表ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 选课报表ToolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem 关闭ToolStripMenuItem;
     }
 }

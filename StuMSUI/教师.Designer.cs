@@ -85,6 +85,8 @@
             this.Name = "教师";
             this.Text = "教师";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.教师_FormClosing);
+            this.Load += new System.EventHandler(this.教师_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

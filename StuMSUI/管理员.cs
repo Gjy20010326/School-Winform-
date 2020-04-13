@@ -78,7 +78,7 @@ namespace StuMSUI
         /// <param name="e"></param>
         private void 管理学生ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            gl管理学生 g = new gl管理学生();
+            管理学生 g = new 管理学生();
             g.MdiParent = this;
             g.StartPosition = FormStartPosition.CenterScreen;
             ChangeChildren(g);
@@ -104,10 +104,22 @@ namespace StuMSUI
 
         private void 管理教师ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            g教师报表 s = new g教师报表();
+            管理教师 s = new 管理教师();
             s.MdiParent = this;
             s.StartPosition = FormStartPosition.CenterScreen;
             ChangeChildren(s);
         }
+
+        private void 关闭ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (DialogResult.OK == MessageBox.Show("你确定要关闭应用程序吗？", "关闭提示", MessageBoxButtons.OKCancel, MessageBoxIcon.Question))
+            {
+                //为保证Application.Exit();时不再弹出提示，所以将FormClosing事件取消
+                this.FormClosing -= new FormClosingEventHandler(this.管理员_FormClosing);
+                Application.Exit();//退出整个应用程序
+            }
+            
+        }
+   
     }
 }

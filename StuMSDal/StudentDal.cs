@@ -70,6 +70,29 @@ namespace StuMSDal
                             where sname like '%"+sname+"%'";
             return ADOTools.ExcuteDataTable(name);
         }
+        /// <summary>
+        /// 修改基本信息
+        /// </summary>
+        /// <param name="s"></param>
+        /// <returns></returns>
+        public int UpdStudent(Student s)
+        {
+            string sql = "update student set sname='" + s.Sname + "',sbirthday='" + s.Sbirthday + "',ssex='" + s.Ssex + "',spassword='" + s.Spassword + "' where sid=" + s.Sid + "";
+            return ADOTools.ExcuteNoQuery(sql);
+        }
+        /// <summary>
+        /// 按照学生ID查询成绩
+        /// </summary>
+        /// <returns></returns>
+        public DataTable SearchStuID(int sid)
+        {
+            string sql = @"select s.sname,c.cname,sc.score from SC_Mapping as sc
+                            inner join student as s on s.sid = sc.sid
+                            inner join course as c on c.cid = sc.cid
+                            where s.sid = "+sid;
+            return ADOTools.ExcuteDataTable(sql);
+        }
+
         //public List<Student> UpdStudent(int id)
         //{
         //    SqlConnection conn = new SqlConnection(ADOTools.connStr);
@@ -108,16 +131,7 @@ namespace StuMSDal
         //    return list;
         //}
 
-        /// <summary>
-        /// 修改基本信息
-        /// </summary>
-        /// <param name="s"></param>
-        /// <returns></returns>
-        public int UpdStudent(Student s)
-        {
-            string sql = "update student set sname='"+s.Sname+"',sbirthday='"+s.Sbirthday+"',ssex='"+s.Ssex+"',spassword='"+s.Spassword+"' where sid="+s.Sid+"";
-            return ADOTools.ExcuteNoQuery(sql);
-        }
+
 
     }
 }
